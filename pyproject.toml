@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "embedding-tools"
+version = "0.1.0"
+description = "Tools to create embeddings for documents, parse certain documents, and store them in a postgres vector store."
+authors = ["Christian Brown <chris@boxtalk.ai>"]
+readme = "README.md"
+packages = [{include = "embedding-tools", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<=3.13"
+pyyaml = "^6.0.2"
+typer = {extras = ["all"], version = "^0.12.3"}
+sqlmodel = "^0.0.21"
+asyncpg = "^0.29.0"
+pgvector = "^0.3.2"
+fastapi = "^0.112.0"
+uvicorn = {extras = ["standard"], version = "^0.30.6"}
+rich = "^13.7.1"
+paramiko = "^3.4.1"
+aioodbc = "^0.5.0"
+cryptography = "^43.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
